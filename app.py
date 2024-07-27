@@ -36,7 +36,10 @@ def fetch_novel():
         return jsonify({'error': 'URL is required'}), 400
 
     try:
-        response = requests.get(url)
+        he={
+            'User-Agent': 'Mozilla/5.0 (Linux; Android 10; Pixel 3 XL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Mobile Safari/537.36'
+        }
+        response = requests.get(url,headers=he)
         response.encoding = 'utf-8'
         logging.debug(f"HTTP response status code: {response.status_code}")
         if response.status_code != 200:
