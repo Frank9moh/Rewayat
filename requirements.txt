@@ -1,5 +1,0 @@
-flask
-requests
-beautifulsoup4
-html2text
-flask-cors
